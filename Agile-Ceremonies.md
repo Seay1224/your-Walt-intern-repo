@@ -8,7 +8,7 @@
 
 ## Research & Learn
 
-###1. Main Agile Ceremonies
+### 1.Main Agile Ceremonies
 * **Daily Stand-ups:** A short (15-min) sync meeting where we answer: What did I do yesterday? What will I do today? Do I have any blockers?
 * **Sprint Planning (Scrum) vs. Continuous Prioritization (Kanban):**
     * *Scrum:* A dedicated meeting to plan the next 2 weeks of work.
