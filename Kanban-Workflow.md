@@ -19,7 +19,7 @@ Columns represent the specific stages a task go through.
 
 ### 3. Task Movement & Responsibility
 * **Movement:** Tasks move from left to right.
-* ** Responsibility:** The person assighned to the card(Me) is responsible for keeping its statys updated. If I finish the coding, its my job to move it to the next stages.
+* **Responsibility:** The person assighned to the card(Me) is responsible for keeping its statys updated. If I finish the coding, its my job to move it to the next stages.
 
 ### 4.Benefits of Limiting Work In Progress(WIP)
 Limiting WIP presents context switching. It forces the team to focus on **finishing**current work before **starting** new work, which can speed up overall delivery time(Cycle Time).
