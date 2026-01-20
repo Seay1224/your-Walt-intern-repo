@@ -7,7 +7,7 @@
 
 ---
 
-## ⌨ Top 10 Useful VS Code Shortcuts 
+##  Top 10 Useful VS Code Shortcuts 
 
 I have researched and tested these shortcuts specifically for my Windows development environment.
 
