@@ -7,7 +7,7 @@
 
 ---
 
-## ⌨️ Top 10 Useful VS Code Shortcuts 
+##  Top 10 Useful VS Code Shortcuts 
 
 I have researched and tested these shortcuts specifically for my Windows development environment.
 
@@ -34,7 +34,7 @@ I have researched and tested these shortcuts specifically for my Windows develop
 
 ---
 
-## 📝 Reflection
+##  Reflection
 
 ### 1. Which shortcuts do you think will be the most useful in your daily work?
 The **Multiple Cursors (`Ctrl + D`)** shortcut is undoubtedly the most useful. In backend development, we often deal with repetitive structures (like mapping DTOs to Entities). Being able to edit 10 lines at once feels like a superpower and significantly reduces typing fatigue.
