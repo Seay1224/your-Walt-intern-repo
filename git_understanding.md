@@ -18,3 +18,19 @@ Git separates them to give developers **control and granularity**.
 ## 3. When would you want to stage changes without committing?
 * **Partial Updates:** When I have done a lot of work on a file but only want to commit a specific part of it (e.g., using `git add -p` to stage specific lines).
 * **Context Switching:** When I need to switch branches but my work isn't finished yet. I might stage the good parts to keep them safe in the index before deciding whether to commit or stash them.
+
+
+---
+
+## 4. Branching & Collaboration
+
+### Why is pushing directly to `main` problematic?
+* **Risk of Breaking Production:** The `main` branch usually represents the "stable" version of the software. Pushing unverified code directly to it can introduce bugs that immediately affect all users.
+* **No Code Review:** Direct pushes bypass the opportunity for teammates to check the code (Peer Review), leading to lower code quality and shared knowledge gaps.
+
+### How do branches help with reviewing code?
+* **Isolation:** Branches allow developers to work on features or fixes in isolation without disturbing the stable codebase.
+* **Pull Requests (PRs):** A branch allows us to create a PR. This is a dedicated space where the team can discuss, critique, and improve the specific set of changes before they are merged into `main`.
+
+### What happens if two people edit the same file on different branches?
+* **Merge Conflict:** Git will stop and ask for help. It cannot automatically decide which version is correct. The developer performing the merge must manually resolve the conflict by choosing which code to keep (or combining both).
