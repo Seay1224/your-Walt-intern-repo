@@ -34,3 +34,53 @@ Git separates them to give developers **control and granularity**.
 
 ### What happens if two people edit the same file on different branches?
 * **Merge Conflict:** Git will stop and ask for help. It cannot automatically decide which version is correct. The developer performing the merge must manually resolve the conflict by choosing which code to keep (or combining both).
+
+
+---
+
+
+## 5. Advanced Git Commands (Reflections & Logs)
+
+### `git checkout main -- <file>`
+* **What it does:** It forcefully restores a specific file to the state it is in on the `main` branch, discarding any local changes.
+* **Real-world use:** "Emergency Reset." When I've messed up a configuration file while testing and just want to get back to the clean version from production without resetting my entire workspace.
+* **My Experiment Log:**
+    I modified `learning_goals.md` and then restored it using this command.
+    ```bash
+    # Restoring the file from main
+    $ git checkout main -- learning_goals.md
+    
+    # Result: The file immediately reverted to its original state.
+    ```
+
+### `git cherry-pick <commit>`
+* **What it does:** It copies a specific commit from one branch and applies it to the current branch.
+* **Real-world use:**
+    * **Hotfixes:** Moving a bug fix from a development branch to a release branch.
+    * **Correction:** When I accidentally committed to `main` (like in my experiment below) and needed to move that specific commit to my feature branch.
+* **My Experiment Log:**
+    I accidentally made a commit on `main`, so I switched to my branch and cherry-picked it over.
+    ```bash
+    # Step 1: I found the commit hash on main
+    $ git log -1
+    commit 013fc2018647191e639e242b2cde79cfb8ca31b2 (HEAD -> main)
+    feat: add cherry emoji
+
+    # Step 2: I switched to my feature branch
+    $ git checkout docs/git-advanced-commands
+
+    # Step 3: I picked that specific commit
+    $ git cherry-pick 013fc2018647191e639e242b2cde79cfb8ca31b2
+    [docs/git-advanced-commands d05a822] feat: add cherry emoji
+     Date: Wed Jan 28 14:50:08 2026 +1100
+     1 file changed, 2 insertions(+), 1 deletion(-)
+    ```
+
+### `git log` & `git blame`
+* **What they do:** `log` shows the chronological history; `blame` shows the author and timestamp for every single line in a file.
+* **Real-world use:**
+    * **Context:** I used `git log` to find the hash `013fc20` needed for the cherry-pick above.
+    * **Accountability & Debugging:** `git blame` is useful to find out *who* wrote a complex piece of logic so I can ask them questions, or to check if a recent change corresponds to when a bug started appearing.
+
+
+
