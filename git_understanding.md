@@ -38,9 +38,6 @@ Git separates them to give developers **control and granularity**.
 
 ---
 
-## 5. Advanced Git Commands
-
----
 
 ## 5. Advanced Git Commands (Reflections & Logs)
 
@@ -80,33 +77,10 @@ Git separates them to give developers **control and granularity**.
     ```
 
 ### `git log` & `git blame`
-* **What they do:** `log` shows history; `blame` shows who wrote each line.
+* **What they do:** `log` shows the chronological history; `blame` shows the author and timestamp for every single line in a file.
 * **Real-world use:**
     * **Context:** I used `git log` to find the hash `013fc20` needed for the cherry-pick above.
-    * **Accountability:** `git blame` is useful in large teams to find out who to ask questions about a specific piece of code (e.g., "Why was this variable added here?").
-
-
-### `git checkout main -- <file>`
-* **What it does:** It restores a specific file to the state it is in on the `main` branch. It effectively discards any local changes or commits made to that file on the current branch.
-* **Real-world use:** When I accidentally break a configuration file or delete a critical function while experimenting, and I just want to "reset" that specific file back to a known working state without resetting my entire project.
-
-### `git cherry-pick <commit>`
-* **What it does:** It takes a single specific commit from another branch and applies it to the current branch, creating a new copy of that commit.
-* **Real-world use:**
-    * **Hotfixes:** When a bug is fixed in a development branch, but that specific fix needs to be deployed to production immediately without merging the unfinished features from the dev branch.
-    * **Recovering work:** If I accidentally committed to the wrong branch, I can switch to the correct branch and cherry-pick the commit over.
-
-### `git log`
-* **What it does:** It displays the chronological history of commits.
-* **Real-world use:**
-    * **Finding Context:** To understand "why" a change was made by reading past commit messages.
-    * **Finding Hash IDs:** To find the specific commit hash needed for a `cherry-pick` or `git revert`.
-
-### `git blame <file>`
-* **What it does:** It shows the author and timestamp for the last modification of every single line in a file.
-* **Real-world use:**
-    * **Context Hunting:** It's not just for blaming people! It's mostly used to find out *who* wrote a complex piece of logic so I can ask them questions about it.
-    * **Debugging:** To see if a recent change (e.g., "Edited 2 hours ago") corresponds to when a bug started appearing.
+    * **Accountability & Debugging:** `git blame` is useful to find out *who* wrote a complex piece of logic so I can ask them questions, or to check if a recent change corresponds to when a bug started appearing.
 
 
 
