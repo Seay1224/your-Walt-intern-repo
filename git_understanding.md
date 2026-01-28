@@ -84,3 +84,33 @@ Git separates them to give developers **control and granularity**.
 
 
 
+---
+
+## 7. Pull Request & Workflow Reflection
+
+### Why are PRs important?
+* **Quality Gate:** PRs allow the team to review code before it touches `main`, preventing bugs from breaking production.
+* **Knowledge Transfer:** It allows junior developers to learn from senior feedback during the review process.
+* **Documentation:** The PR discussion serves as a permanent history of *why* a change was made.
+
+### My PR Workflow Evidence
+I successfully created a feature branch, pushed it, merged it via GitHub, and cleaned up my local environment.
+
+**Terminal Log Proof:**
+```text
+# 1. Pushing the feature branch
+$ git push -u origin docs/pr-workflow
+remote: Create a pull request for 'docs/pr-workflow' on GitHub...
+To [https://github.com/Seay1224/your-Walt-intern-repo.git](https://github.com/Seay1224/your-Walt-intern-repo.git)
+
+# 2. Switching to main and pulling the merged code
+$ git checkout main
+$ git pull
+Updating 013fc20..9dcd83c
+Fast-forward
+ git_understanding.md | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 51 insertions(+), 1 deletion(-)
+
+# 3. Deleting the feature branch (Cleanup)
+$ git branch -d docs/pr-workflow
+Deleted branch docs/pr-workflow (was 8bffbcc).
