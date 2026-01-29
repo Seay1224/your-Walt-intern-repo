@@ -106,29 +106,47 @@ Git separates them to give developers **control and granularity**.
 I successfully created a feature branch, pushed it, merged it via GitHub, and cleaned up my local environment.
 
 **Terminal Log Proof:**
+<<<<<<< HEAD
 
 ```text
 # 1. Pushing the feature branch
 $ git push -u origin docs/pr-workflow
 remote: Create a pull request for 'docs/pr-workflow' on GitHub...
 To [https://github.com/Seay1224/your-Walt-intern-repo.git](https://github.com/Seay1224/your-Walt-intern-repo.git)
+=======
+    ```text
+    # 1. Pushing the feature branch
+    $ git push -u origin docs/pr-workflow
+    remote: Create a pull request for 'docs/pr-workflow' on GitHub...
+    To [https://github.com/Seay1224/your-Walt-intern-repo.git](https://github.com/Seay1224/your-Walt-intern-repo.git)
 
-# 2. Switching to main and pulling the merged code
-$ git checkout main
-$ git pull
-Updating 013fc20..9dcd83c
-Fast-forward
- git_understanding.md | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++-
- 1 file changed, 51 insertions(+), 1 deletion(-)
+    # 2. Switching to main and pulling the merged code
+    $ git checkout main
+    $ git pull
+    Updating 013fc20..9dcd83c
+    Fast-forward
+    git_understanding.md | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+    1 file changed, 51 insertions(+), 1 deletion(-)
 
-# 3. Deleting the feature branch (Cleanup)
-$ git branch -d docs/pr-workflow
-Deleted branch docs/pr-workflow (was 8bffbcc).
+    # 3. Deleting the feature branch (Cleanup)
+    $ git branch -d docs/pr-workflow
+    Deleted branch docs/pr-workflow (was 8bffbcc).
+
+
+
+
+
+
+
+>>>>>>> origin/main
+
+
 
 
 
 
 ---
+
 
 ## 8. Commit Message Best Practices
 
