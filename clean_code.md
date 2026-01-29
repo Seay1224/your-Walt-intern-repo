@@ -187,4 +187,68 @@ function calculateFinalPrice(basePrice, userType) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+---
+
+## 5. Writing Small, Focused Functions (Single Responsibility)
+
+### Why is breaking down functions beneficial?
+* **Testability:** It's easy to write a unit test for a small function like `calculateTax(price)` than a giant function that calculates tax, updates the database, and sends an email all at once.
+* **Reusability:** Small functions can be used in multiple places. If `formatDate()` is its own function, I can use it everywhere, not just in one report.
+* **Debugging:** If something breaks, a small function helps isolate the issue immediately.
+
+### Refactoring Example: The "God Function" vs. Small Functions
+
+** The "God Function" (Too Big):**
+This function does TOO much: validates input, calculates logic, handles errors, and formats output.
+```javascript
+function processOrder(order) {
+    // 1. Validation
+    if (!order.id || !order.items || order.items.length === 0) {
+        console.log("Invalid order");
+        return;
+    }
+    
+    // 2. Calculation
+    let total = 0;
+    for (let item of order.items) {
+        total += item.price * item.quantity;
+    }
+    
+    // 3. Formatting & Output
+    console.log("Order ID: " + order.id);
+    console.log("Total: $" + total.toFixed(2));
+}
+
+```
+
+** Refactored (Small & Focused)::**
+
+```javascript
+
+// Function 1: Pure Validation
+function isValidOrder(order) {
+    return order.id && order.items && order.items.length > 0;
+}
+
+// Function 2: Pure Calculation
+function calculateTotal(items) {
+    return items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+}
+
+// Function 3: Coordinator (The Controller)
+function processOrder(order) {
+    if (!isValidOrder(order)) {
+        console.log("Invalid order");
+        return;
+    }
+    
+    const total = calculateTotal(order.items);
+    
+    console.log(`Order ID: ${order.id}`);
+    console.log(`Total: $${total.toFixed(2)}`);
+}
+```
+>>>>>>> 1e00fdda3fa96d409f4e85f269670ccdaa6776df
