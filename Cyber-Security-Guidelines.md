@@ -43,7 +43,7 @@ Locking the computer prevents unauthorized physical access. Even at home or a co
 **Improvement Needed:** I have a bad habit of reusing variations of the same password for personal accounts. I need to stop this immediately to prevent "credential stuffing" attacks from affecting my work accounts.
 
 ### 2. How can you make secure behaviour a habit rather than an afterthought?
-I will integrate security checks into my standard "Definition of Done." Just as I wouldn't push code without running tests, I will not finish a task without verifying that no secrets are exposed and 2FA is active. I will treat security as a daily discipline, not a one-time setup.
+I will integrate security checks into my standard "Definition of Done." Just as I wouldn't push code without running tests, I will not finish a AI-Usage-Guidelines.mdtask without verifying that no secrets are exposed and 2FA is active. I will treat security as a daily discipline, not a one-time setup.
 
 ### 3. What steps will you take to ensure your passwords and accounts are secure?
 I will take the following steps today:
