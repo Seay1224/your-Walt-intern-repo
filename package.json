@@ -1,0 +1,26 @@
+{
+  "name": "your-walt-intern-repo",
+  "version": "1.0.0",
+  "description": "hello focus bear",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seay1224/your-Walt-intern-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Seay1224/your-Walt-intern-repo/issues"
+  },
+  "homepage": "https://github.com/Seay1224/your-Walt-intern-repo#readme",
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1"
+  }
+}
