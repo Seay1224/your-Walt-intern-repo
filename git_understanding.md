@@ -106,14 +106,6 @@ Git separates them to give developers **control and granularity**.
 I successfully created a feature branch, pushed it, merged it via GitHub, and cleaned up my local environment.
 
 **Terminal Log Proof:**
-<<<<<<< HEAD
-
-```text
-# 1. Pushing the feature branch
-$ git push -u origin docs/pr-workflow
-remote: Create a pull request for 'docs/pr-workflow' on GitHub...
-To [https://github.com/Seay1224/your-Walt-intern-repo.git](https://github.com/Seay1224/your-Walt-intern-repo.git)
-=======
     ```text
     # 1. Pushing the feature branch
     $ git push -u origin docs/pr-workflow
@@ -132,13 +124,6 @@ To [https://github.com/Seay1224/your-Walt-intern-repo.git](https://github.com/Se
     $ git branch -d docs/pr-workflow
     Deleted branch docs/pr-workflow (was 8bffbcc).
 
-
-
-
-
-
-
->>>>>>> origin/main
 
 
 
@@ -169,4 +154,4 @@ I created three commits to test different styles:
 ### How can poor commit messages cause issues later?
 * **Bisecting Nightmares:** If I use `git bisect` and land on a commit named "update", I won't know if that commit was supposed to touch the database or the UI.
 * **Lost History:** If a bug appears 6 months later, seeing "fixed bug" doesn't tell us if *this* specific bug was previously addressed.
-```
+````
