@@ -1,36 +1,44 @@
+// 1. Fixed: Magic Numbers & Strings 
+const ROLES = {
+    ADMIN: 1,
+    SUPER_USER: 2
+};
+const DISCOUNT_RATE = 0.9;
+
+// 2. Fixed: Large Class 
+class EmailService {
+    static send(email, message) {
+        console.log(`Sending to ${email}: ${message}`);
+    }
+}
+
 class UserHandler {
-    constructor() {
-        this.users = [];
-    }
-    handle(u) {
-        if (u) {
-            if (u.age) {
-                if (u.age >= 18) {
-                    // 2. Magic Numbers & Strings 
-                    if (u.role === 1) { 
-                         // 3. Duplicate Code 
-                        let d = u.bal * 0.9; 
-                        console.log("Admin total: " + d);
-                        this.sendEmail(u.em, "Welcome Admin");
-                    } else {
-                        console.log("User login");
-                    }
-                }
-            }
+    // 3. Fixed: Inconsistent Naming 
+    processUser(user) {
+        // 4. Fixed: Deeply Nested 
+        if (!user || !user.age || user.age < 18) {
+            return;
         }
 
-        // ... Duplicate Code again 
-        if (u && u.role === 2) {
-             let d = u.bal * 0.9; 
-             console.log("SuperUser total: " + d);
-        }
+        this.handleUserRole(user);
     }
 
-    // 4. Large Class 
-    sendEmail(email, msg) {
-        console.log(`Sending to ${email}: ${msg}`);
+    // 5. Fixed: Long Function 
+    handleUserRole(user) {
+        if (user.role === ROLES.ADMIN) {
+            this.applyDiscount(user.balance, "Admin");
+            EmailService.send(user.email, "Welcome Admin");
+        } else if (user.role === ROLES.SUPER_USER) {
+            this.applyDiscount(user.balance, "SuperUser");
+        } else {
+            console.log("User login");
+        }
+    }
+    applyDiscount(balance, roleName) {
+        const discountedTotal = balance * DISCOUNT_RATE;
+        console.log(`${roleName} total: ${discountedTotal}`);
     }
 }
 
 const handler = new UserHandler();
-handler.handle({ age: 20, role: 1, bal: 100, em: "test@test.com" });
+handler.processUser({ age: 20, role: ROLES.ADMIN, balance: 100, email: "test@test.com" });
