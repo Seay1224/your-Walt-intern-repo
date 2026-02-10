@@ -20,11 +20,11 @@ jobs:
       with:
         node-version: '18'
     
-    - name: Install dependencies
+    - name: Install dependencies                                                 
       run: npm install
 
     - name: Run Markdown Lint
-      run: npx markdownlint "**/*.md"
+      run: npx markdownlint-cli "**/*.md"
 
     - name: Run Spell Check
       run: npx cspell "**/*.md"

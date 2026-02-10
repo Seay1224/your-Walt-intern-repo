@@ -1,1 +1,2 @@
-
+npx markdownlint-cli "**/*.md"
+npx cspell "**/*.md"
