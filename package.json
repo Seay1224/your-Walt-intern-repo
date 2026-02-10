@@ -4,7 +4,8 @@
   "description": "hello focus bear",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,11 @@
   },
   "homepage": "https://github.com/Seay1224/your-Walt-intern-repo#readme",
   "devDependencies": {
+    "cspell": "^9.6.4",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "jest": "^30.2.0",
+    "markdownlint-cli": "^0.47.0",
     "prettier": "^3.8.1"
   }
 }
