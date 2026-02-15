@@ -43,3 +43,7 @@ To understand how to handle sensitive data responsibly and follow Focus Bear’s
 ##  Task: My Commitment
 **I will adopt the following habit to improve data security:**
 I will verify my `.gitignore` file effectively excludes all environment variables and sensitive configuration files before every commit. I will also enable 2FA (Two-Factor Authentication) on all my work accounts immediately.
+
+
+## Screenshot Evidence
+![Security Proof](./image-2.png)
