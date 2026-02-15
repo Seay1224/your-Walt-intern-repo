@@ -106,7 +106,7 @@ Git separates them to give developers **control and granularity**.
 I successfully created a feature branch, pushed it, merged it via GitHub, and cleaned up my local environment.
 
 **Terminal Log Proof:**
-    ```text
+```text
     # 1. Pushing the feature branch
     $ git push -u origin docs/pr-workflow
     remote: Create a pull request for 'docs/pr-workflow' on GitHub...
@@ -123,6 +123,7 @@ I successfully created a feature branch, pushed it, merged it via GitHub, and cl
     # 3. Deleting the feature branch (Cleanup)
     $ git branch -d docs/pr-workflow
     Deleted branch docs/pr-workflow (was 8bffbcc).
+```
 
 
 
@@ -131,6 +132,7 @@ I successfully created a feature branch, pushed it, merged it via GitHub, and cl
 
 
 ---
+
 
 
 ## 8. Commit Message Best Practices
