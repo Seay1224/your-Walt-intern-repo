@@ -194,6 +194,8 @@ function processOrder(order) {
 
 ---
 
+
+
 ## 6. Avoiding Code Duplication (DRY Principle)
 
 ### Reflection
