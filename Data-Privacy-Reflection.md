@@ -1,60 +1,45 @@
-# Company Policies: Occupational Health & Safety (OHS)
+# Data Privacy & Confidentiality Reflection
 
-**Name:** Walt
-**Role:** Backend Intern
-**Date:** 2026-01-19
-
----
+## Goal
+To understand how to handle sensitive data responsibly and follow Focus Bear’s privacy and confidentiality policies.
 
 ## Research & Learn
 
-### 1. What are the key objectives of Focus Bear's OHS policy?
+### 1. What types of data are considered confidential at Focus Bear?
+* **User PII (Personally Identifiable Information):** Names, email addresses, and profile pictures.
+* **Usage Data:** Specific habits, focus session logs, and blocked apps lists (this reveals user behavior patterns).
+* **Technical Secrets:** API Keys (Stripe, OpenAI), database credentials, and internal source code algorithms.
+* **Business Data:** Internal roadmaps, unreleased features, and financial metrics.
 
-Based on the onboarding document, the objectives are:
+### 2. What are best practices for handling confidential data?
+* **Least Privilege:** Only access data that is strictly necessary for the current task.
+* **Encryption:** Ensure data is encrypted at rest (database) and in transit (HTTPS/TLS).
+* **No Hardcoding:** Never commit passwords or API keys to GitHub; use `.env` files instead.
+* **Secure Sharing:** Use password managers (like 1Password) to share credentials, never via Slack/Email plain text.
 
-- **Prevent Incidents:** Through regular risk assessments and safety measures.
-- **Comprehensive Training:** Ensuring staff are trained in emergency procedures, mental health awareness, and ergonomics.
-- **Safety Culture:** Promoting a culture where safety is prioritized.
-
-### 2. What are the specific requirements for your workspace?
-
-- **Ergonomic Setup:** I must have a supportive chair, a screen positioned at eye level, and good lighting to prevent strain.
-- **Safe Environment:** The workspace must be clutter-free to avoid trip hazards (e.g., loose cables).
-
-### 3. How should you manage your physical and mental well-being?
-
-- **Regular Breaks:** I should take scheduled breaks to stretch and prevent fatigue. (The Focus Bear app actually enforces this!).
-- **Mental Wellbeing:** Prioritize mental health by utilizing wellness resources and practicing mindfulness.
-
-### 4. What is the protocol for reporting incidents?
-
-- **Immediate Reporting:** Any work-related injuries or safety concerns must be reported immediately to the management/supervisor.
-
----
+### 3. How should you respond to a suspected data breach or accidental disclosure?
+* **Immediate Reporting:** Notify the CTO or Data Protection Officer immediately. Do not try to hide it.
+* **Containment:** If possible, disconnect the compromised system or revoke the leaked credential immediately.
+* **Documentation:** Record exactly what happened, when it happened, and what data might be affected.
 
 ## Reflection
 
-### 1. Assessment of my current workspace
+### 1. What steps can you take to ensure you handle data securely in your daily tasks?
+* **Git Vigilance:** Always check `git status` before committing to ensure no `.env` files or local config files are included.
+* **Screen Security:** Lock my computer whenever I step away from the desk.
+* **Clean Desktop:** Do not store user data dumps (CSV/JSON) on my local desktop; use the secure development database instead.
 
-- **Chair:** I have an adjustable office chair with lumbar support.
-- **Monitor:** My monitor is slightly too low. **Action:** I will use a stand or books to raise it to eye level today.
-- **Lighting:** I have sufficient natural light and a desk lamp for evening work.
+### 2. How should you store, share, and dispose of sensitive information safely?
+* **Store:** In secure, access-controlled databases or encrypted cloud storage (Google Drive with strict permissions).
+* **Share:** Use ephemeral links (e.g., 1Password sharing links) that expire after one view.
+* **Dispose:** When testing is done, delete local test databases and scrub any temporary files securely.
 
-### 2. My plan for taking breaks
+### 3. What are some common mistakes that lead to data privacy issues?
+* **Hardcoding Secrets:** Accidentally pushing API keys to a public GitHub repository.
+* **Weak Passwords:** Using "123456" or reusing passwords across accounts.
+* **Phishing:** Clicking on suspicious links in emails that look like system alerts.
+* **Over-sharing:** Posting screenshots of code or database tables on social media or public forums.
 
-I often forget to move when I'm "in the zone" coding.
-
-- **Strategy:** I will enable the "break reminders" in the Focus Bear app to force myself to stand up and stretch every 50 minutes.
-
-### 3. Emergency Plan
-
-Since I work from home, I have identified my nearest exit and verified that my smoke alarm is functional.
-
----
-
-## Task: OHS Checklist
-
-- [x] **Ergonomic Check:** My screen is at eye level, and my feet are flat on the floor (or on a footrest).
-- [x] **Hazard Check:** My floor area is clear of tripping hazards (cables are organized).
-- [x] **Break Schedule:** I have configured the Focus Bear app to remind me to stretch.
-- [x] **Mental Health:** I am aware of the external support resources (like Beyond Blue/1800RESPECT) listed in the policy if needed.
+##  Task: My Commitment
+**I will adopt the following habit to improve data security:**
+I will verify my `.gitignore` file effectively excludes all environment variables and sensitive configuration files before every commit. I will also enable 2FA (Two-Factor Authentication) on all my work accounts immediately.
