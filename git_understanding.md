@@ -106,6 +106,7 @@ Git separates them to give developers **control and granularity**.
 I successfully created a feature branch, pushed it, merged it via GitHub, and cleaned up my local environment.
 
 **Terminal Log Proof:**
+
 ```text
     # 1. Pushing the feature branch
     $ git push -u origin docs/pr-workflow
@@ -125,35 +126,30 @@ I successfully created a feature branch, pushed it, merged it via GitHub, and cl
     Deleted branch docs/pr-workflow (was 8bffbcc).
 ```
 
-
-
-
-
-
-
 ---
-
-
 
 ## 8. Commit Message Best Practices
 
 ### Experiment Reflection
+
 I created three commits to test different styles:
-1.  **Vague:** "fixed stuff" - Looking back at the log, I have no idea *what* was fixed.
-2.  **Overly Detailed:** "I decided to add..." - The title was cut off in GitHub's UI, and it was too hard to scan quickly.
-3.  **Structured:** "test: add temporary..." - Instantly tells me the **type** of change and the **intent**.
+
+1. **Vague:** "fixed stuff" - Looking back at the log, I have no idea _what_ was fixed.
+2. **Overly Detailed:** "I decided to add..." - The title was cut off in GitHub's UI, and it was too hard to scan quickly.
+3. **Structured:** "test: add temporary..." - Instantly tells me the **type** of change and the **intent**.
 
 ### What makes a good commit message?
-* **Structure:** It should follow a standard like **Conventional Commits**: `<type>(<scope>): <subject>`.
-    * Types: `feat` (new feature), `fix` (bug fix), `docs` (documentation), `chore` (maintenance).
-* **Imperative Mood:** Use "Add" instead of "Added". (e.g., "Add user login" behaves like a command).
-* **Concise:** The subject line should be under 50 characters.
+- **Structure:** It should follow a standard like **Conventional Commits**: `<type>(<scope>): <subject>`.
+  - Types: `feat` (new feature), `fix` (bug fix), `docs` (documentation), `chore` (maintenance).
+- **Imperative Mood:** Use "Add" instead of "Added". (e.g., "Add user login" behaves like a command).
+- **Concise:** The subject line should be under 50 characters.
 
 ### How does a clear commit message help in team collaboration?
-* **Changelogs:** Good messages allow tools to automatically generate "What's New" release notes.
-* **Reviewing:** It helps the reviewer understand the *context* ("Why did they do this?") before looking at the code.
+- **Changelogs:** Good messages allow tools to automatically generate "What's New" release notes.
+- **Reviewing:** It helps the reviewer understand the _context_ ("Why did they do this?") before looking at the code.
 
 ### How can poor commit messages cause issues later?
-* **Bisecting Nightmares:** If I use `git bisect` and land on a commit named "update", I won't know if that commit was supposed to touch the database or the UI.
-* **Lost History:** If a bug appears 6 months later, seeing "fixed bug" doesn't tell us if *this* specific bug was previously addressed.
+- **Bisecting Nightmares:** If I use `git bisect` and land on a commit named "update", I won't know if that commit was supposed to touch the database or the UI.
+- **Lost History:** If a bug appears 6 months later, seeing "fixed bug" doesn't tell us if _this_ specific bug was previously addressed.
+
 ````

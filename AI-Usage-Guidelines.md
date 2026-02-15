@@ -59,7 +59,7 @@ I will practice **"Data Sanitization."** Before copying any code into ChatGPT, I
 
 ## Task: AI Experiment & Best Practice
 
-### 1. Identify one task you can improve using an AI tool, and try it out.
+### 1. Identify one task you can improve using an AI tool, and try it out
 
 **Task:** Create a NestJS DTO (Data Transfer Object) for a "User Profile Update" feature with validation.
 **Prompt Used:** "Create a specific UpdateUserProfileDto in NestJS. It should allow optional updates for 'bio' (string, max 500 chars) and 'website' (must be a valid URL)."
@@ -72,7 +72,7 @@ I will practice **"Data Sanitization."** Before copying any code into ChatGPT, I
 - **The Bad:** It imported `IsUrl` from `class-validator` but forgot to add the `@ApiProperty()` decorators which are required for our Swagger documentation.
 - **Result:** It required editing. I had to manually add the Swagger decorators to make the code compliant with our project standards.
 
-### 3. Document one best practice you will follow when using AI tools at Focus Bear.
+### 3. Document one best practice you will follow when using AI tools at Focus Bear
 
 **Best Practice:** **"Sanitize before Prompting."**
 **Description:** I will never copy-paste entire files blindly. I will strictly remove any hardcoded secrets, IP addresses, or internal project names from code snippets before asking AI for help to prevent data leakage.

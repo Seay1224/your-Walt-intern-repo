@@ -63,8 +63,8 @@ I will improve teamwork by **coming prepared to Stand-ups**.
 
 - **Current State:** I will ask questions during the short meeting.
 - **Improvement:**
-  1.  Attempt to solve the issue myself first.
-  2.  If unsolved, note it down and **summarize** the key technical hurdles.
-  3.  Present this summary concisely during the Stand-up to get targeted advice.
+  1. Attempt to solve the issue myself first.
+  2. If unsolved, note it down and **summarize** the key technical hurdles.
+  3. Present this summary concisely during the Stand-up to get targeted advice.
 
 - **Benefit:** This respects the team's time and ensures I get the right help immediately without turning the stand-up into a long debugging session.

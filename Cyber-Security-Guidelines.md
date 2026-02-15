@@ -53,7 +53,7 @@ Locking the computer prevents unauthorized physical access. Even at home or a co
 
 <<<<<<< HEAD
 
-# I will integrate security checks into my standard "Definition of Done." Just as I wouldn't push code without running tests, I will not finish a task without verifying that no secrets are exposed and 2FA is active. I will treat security as a daily discipline, not a one-time setup.
+# I will integrate security checks into my standard "Definition of Done." Just as I wouldn't push code without running tests, I will not finish a task without verifying that no secrets are exposed and 2FA is active. I will treat security as a daily discipline, not a one-time setup
 
 I will integrate security checks into my standard "Definition of Done." Just as I wouldn't push code without running tests, I will not finish a AI-Usage-Guidelines.mdtask without verifying that no secrets are exposed and 2FA is active. I will treat security as a daily discipline, not a one-time setup.
 
@@ -63,17 +63,17 @@ I will integrate security checks into my standard "Definition of Done." Just as 
 
 I will take the following steps today:
 
-1.  Install a Password Manager (like Bitwarden).
-2.  Conduct an audit of my GitHub, Discord, and Email accounts to ensure 2FA is turned on.
-3.  Replace all my old passwords with generated 20-character random strings.
+1. Install a Password Manager (like Bitwarden).
+2. Conduct an audit of my GitHub, Discord, and Email accounts to ensure 2FA is turned on.
+3. Replace all my old passwords with generated 20-character random strings.
 
 ### 4. What would you do if you suspected a security breach or suspicious activity on your account?
 
 If I suspected a breach, I would:
 
-1.  **Disconnect:** Immediately disconnect the affected device from the internet.
-2.  **Secure:** Change my critical passwords using a _different_, uncompromised device.
-3.  **Report:** Notify the Team Lead (Jeremy) immediately via Discord or phone so they can revoke my access tokens and check server logs.
+1. **Disconnect:** Immediately disconnect the affected device from the internet.
+2. **Secure:** Change my critical passwords using a _different_, uncompromised device.
+3. **Report:** Notify the Team Lead (Jeremy) immediately via Discord or phone so they can revoke my access tokens and check server logs.
 
 ---
 

@@ -1,4 +1,4 @@
-#Module 1:Agile Principles & Frameworks
+# Module 1:Agile Principles & Frameworks
 **Name:** Walt
 **Role** Backend Intern
 **Date** 2026-1-12
@@ -13,18 +13,18 @@ THe Agile Manifesto was created in 2001 to find a better way of developing softw
 
 ### 2. core values and principles
 
-1.  **Individuals and interactions** over processes and tools.
-2.  **Working software** over comprehensive documentation.
-3.  **Customer collaboration** over contract negotiation.
-4.  **Responding to change** over following a plan.
+1. **Individuals and interactions** over processes and tools.
+2. **Working software** over comprehensive documentation.
+3. **Customer collaboration** over contract negotiation.
+4. **Responding to change** over following a plan.
 
 ### 3. Scrum vs. Kanban
 
 | Feature        | Scrum                               | Kanban                                       |
 | :------------- | :---------------------------------- | :------------------------------------------- |
-| **Cadence **   | Fixed Sprints (e.g., 2 weeks).      | Continuous flow (no fixed timeboxes).        |
-| **Roles **     | Defined roles (Scrum Master, PO).   | Flexible, roles fit the current team.        |
-| **Change **    | No changes allowed during a Sprint. | Changes allowed anytime if capacity permits. |
+| **Cadence**   | Fixed Sprints (e.g., 2 weeks).      | Continuous flow (no fixed timeboxes).        |
+| **Roles**     | Defined roles (Scrum Master, PO).   | Flexible, roles fit the current team.        |
+| **Change**    | No changes allowed during a Sprint. | Changes allowed anytime if capacity permits. |
 | **Philosophy** | Structured iterations.              | Visualizing flow and limiting WIP.           |
 
 ### 4. Why Focus Bear prefers Kanban?

@@ -47,10 +47,10 @@ I will follow the **"Overcommunicate"** principle[cite: 703]. Since we are a dis
 
 I will strictly follow the **"Getting Unstuck" Protocol** defined in the onboarding guide[cite: 681, 907, 908]:
 
-1.  **Step 1:** Google / Use AI (ChatGPT/Copilot).
-2.  **Step 2:** Ask another intern.
-3.  **Step 3:** Ask my Supervisor (Task-related) during standup or in public channels[cite: 681, 907].
-4.  **Step 4 (Escalation):** If I have exhausted all options, I will contact **Jeremy**.
+1. **Step 1:** Google / Use AI (ChatGPT/Copilot).
+2. **Step 2:** Ask another intern.
+3. **Step 3:** Ask my Supervisor (Task-related) during standup or in public channels[cite: 681, 907].
+4. **Step 4 (Escalation):** If I have exhausted all options, I will contact **Jeremy**.
     - _Note:_ For logistics/IT issues, I will contact the Project Manager[cite: 906].
 
 ### 4. What would it look like to be proactive during your internship?
