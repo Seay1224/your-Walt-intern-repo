@@ -152,4 +152,21 @@ I created three commits to test different styles:
 - **Bisecting Nightmares:** If I use `git bisect` and land on a commit named "update", I won't know if that commit was supposed to touch the database or the UI.
 - **Lost History:** If a bug appears 6 months later, seeing "fixed bug" doesn't tell us if _this_ specific bug was previously addressed.
 
-````
+
+
+## Merge Conflicts Experience
+
+### What caused the conflict?
+The merge conflict happened because Git found competing changes on the exact same line of the same file (`conflict_test.txt`) across two different branches. I modified line 1 in my working branch, and I also modified line 1 differently in the `test-conflict-branch`. When I tried to merge them, Git couldn't automatically decide which version to keep, so it halted the merge and asked for human intervention.
+
+### How did you resolve it?
+I resolved it using VS Code's built-in Git merge tool. 
+1. I opened the conflicted file, which was marked with `<<<<<<< HEAD` and `>>>>>>>` conflict markers.
+2. I reviewed both versions of the code (Current Change vs. Incoming Change).
+3. I used the VS Code UI button to "Accept Current Change" (or manually edited the file to keep the desired text and deleted the conflict markers).
+4. I saved the file, staged the resolved file using `git add`, and created a new commit to finalize the merge process.
+
+### What did you learn?
+1. **Conflicts are not errors:** They are just Git's way of preventing accidental data loss when teammates work on the same file. It's a safety feature.
+2. **Communication is key:** The best way to resolve conflicts is to prevent them. Communicating with the team about who is working on which file can save a lot of headaches.
+3. **Pull frequently:** Regularly running `git pull` ensures my local branch is up-to-date with `main`, meaning if conflicts do happen, they are small and easy to fix rather than massive code explosions.
