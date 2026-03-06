@@ -38,5 +38,5 @@ I have experimented with the following AI tools to assist my development workflo
 
 AI is most useful as a **"Force Multiplier"** in two scenarios:
 
-1.  **Unblocking:** When I'm stuck on a specific error or don't know the syntax for a command.
-2.  **Drudgery:** Automating tedious tasks like writing test cases or documentation, allowing me to focus on the core logic.
+1. **Unblocking:** When I'm stuck on a specific error or don't know the syntax for a command.
+2. **Drudgery:** Automating tedious tasks like writing test cases or documentation, allowing me to focus on the core logic.

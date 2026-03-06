@@ -106,6 +106,7 @@ Git separates them to give developers **control and granularity**.
 I successfully created a feature branch, pushed it, merged it via GitHub, and cleaned up my local environment.
 
 **Terminal Log Proof:**
+
 ```text
     # 1. Pushing the feature branch
     $ git push -u origin docs/pr-workflow
@@ -125,35 +126,47 @@ I successfully created a feature branch, pushed it, merged it via GitHub, and cl
     Deleted branch docs/pr-workflow (was 8bffbcc).
 ```
 
-
-
-
-
-
-
 ---
-
-
 
 ## 8. Commit Message Best Practices
 
 ### Experiment Reflection
+
 I created three commits to test different styles:
-1.  **Vague:** "fixed stuff" - Looking back at the log, I have no idea *what* was fixed.
-2.  **Overly Detailed:** "I decided to add..." - The title was cut off in GitHub's UI, and it was too hard to scan quickly.
-3.  **Structured:** "test: add temporary..." - Instantly tells me the **type** of change and the **intent**.
+
+1. **Vague:** "fixed stuff" - Looking back at the log, I have no idea _what_ was fixed.
+2. **Overly Detailed:** "I decided to add..." - The title was cut off in GitHub's UI, and it was too hard to scan quickly.
+3. **Structured:** "test: add temporary..." - Instantly tells me the **type** of change and the **intent**.
 
 ### What makes a good commit message?
-* **Structure:** It should follow a standard like **Conventional Commits**: `<type>(<scope>): <subject>`.
-    * Types: `feat` (new feature), `fix` (bug fix), `docs` (documentation), `chore` (maintenance).
-* **Imperative Mood:** Use "Add" instead of "Added". (e.g., "Add user login" behaves like a command).
-* **Concise:** The subject line should be under 50 characters.
+- **Structure:** It should follow a standard like **Conventional Commits**: `<type>(<scope>): <subject>`.
+  - Types: `feat` (new feature), `fix` (bug fix), `docs` (documentation), `chore` (maintenance).
+- **Imperative Mood:** Use "Add" instead of "Added". (e.g., "Add user login" behaves like a command).
+- **Concise:** The subject line should be under 50 characters.
 
 ### How does a clear commit message help in team collaboration?
-* **Changelogs:** Good messages allow tools to automatically generate "What's New" release notes.
-* **Reviewing:** It helps the reviewer understand the *context* ("Why did they do this?") before looking at the code.
+- **Changelogs:** Good messages allow tools to automatically generate "What's New" release notes.
+- **Reviewing:** It helps the reviewer understand the _context_ ("Why did they do this?") before looking at the code.
 
 ### How can poor commit messages cause issues later?
-* **Bisecting Nightmares:** If I use `git bisect` and land on a commit named "update", I won't know if that commit was supposed to touch the database or the UI.
-* **Lost History:** If a bug appears 6 months later, seeing "fixed bug" doesn't tell us if *this* specific bug was previously addressed.
-````
+- **Bisecting Nightmares:** If I use `git bisect` and land on a commit named "update", I won't know if that commit was supposed to touch the database or the UI.
+- **Lost History:** If a bug appears 6 months later, seeing "fixed bug" doesn't tell us if _this_ specific bug was previously addressed.
+
+
+
+## Merge Conflicts Experience
+
+### What caused the conflict?
+The merge conflict happened because Git found competing changes on the exact same line of the same file (`conflict_test.txt`) across two different branches. I modified line 1 in my working branch, and I also modified line 1 differently in the `test-conflict-branch`. When I tried to merge them, Git couldn't automatically decide which version to keep, so it halted the merge and asked for human intervention.
+
+### How did you resolve it?
+I resolved it using VS Code's built-in Git merge tool. 
+1. I opened the conflicted file, which was marked with `<<<<<<< HEAD` and `>>>>>>>` conflict markers.
+2. I reviewed both versions of the code (Current Change vs. Incoming Change).
+3. I used the VS Code UI button to "Accept Current Change" (or manually edited the file to keep the desired text and deleted the conflict markers).
+4. I saved the file, staged the resolved file using `git add`, and created a new commit to finalize the merge process.
+
+### What did you learn?
+1. **Conflicts are not errors:** They are just Git's way of preventing accidental data loss when teammates work on the same file. It's a safety feature.
+2. **Communication is key:** The best way to resolve conflicts is to prevent them. Communicating with the team about who is working on which file can save a lot of headaches.
+3. **Pull frequently:** Regularly running `git pull` ensures my local branch is up-to-date with `main`, meaning if conflicts do happen, they are small and easy to fix rather than massive code explosions.

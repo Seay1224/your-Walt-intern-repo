@@ -49,7 +49,7 @@ Working directly on a laptop forces a trade-off:
 
 ### 3. Reminders
 
-- **Tool:** I will use **Focus Bear**'s built-in movement breaks feature. It blocks the screen and forces me to do a stretch (e.g., deep breathing or yoga)[cite: 866], which is perfect for resetting my posture.
+- **Tool:** I will use **Focus Bear**'s built-in movement breaks feature. It blocks the screen and forces me to do a stretch [e.g., deep breathing or yoga](cite: 866), which is perfect for resetting my posture.
 
 ---
 
